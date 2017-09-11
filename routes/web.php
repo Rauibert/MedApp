@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/create', 'MedsController@create');
+Route::post('/create', 'MedsController@store');

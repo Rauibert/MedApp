@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Http\Requests\MedFormRequest;
+use App\Med;
+
 class MedsController extends Controller
 {
     /**
@@ -15,6 +18,12 @@ class MedsController extends Controller
         return view('meds.create');
     }
 
+    /**
+     * Función para agregar nuevos medicamentos
+     *
+     * @param MedFormRequest $request
+     * @return void
+     */
     public function store(MedFormRequest $request){
         $slug = uniqid();
         $med = new Med(array(
@@ -33,4 +42,7 @@ class MedsController extends Controller
         
         return redirect('/create')->with('status', 'Su medicamento ha sido agregado. Su id única es '.$slug);
     }
+
+
+
 }

@@ -17,3 +17,5 @@ Route::get('/', function () {
 
 Route::get('/create', 'MedsController@create');
 Route::post('/create', 'MedsController@store');
+Route::get('/meds', 'MedsController@index');
+Route::get('/meds/{slug?}', 'MedsController@show');

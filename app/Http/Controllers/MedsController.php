@@ -18,6 +18,18 @@ class MedsController extends Controller
         return view('meds.create');
     }
 
+    public function index(){
+        $meds = Med::all();
+        return view('meds.index', compact('meds'));
+    }
+
+    
+    public function show($slug){
+        $med = Med::whereSlug($slug)->firstOrFail();
+        return view('meds.show', compact('med'));
+    }
+    
+
     /**
      * Función para agregar nuevos medicamentos
      *

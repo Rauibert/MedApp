@@ -19,3 +19,6 @@ Route::get('/create', 'MedsController@create');
 Route::post('/create', 'MedsController@store');
 Route::get('/meds', 'MedsController@index');
 Route::get('/meds/{slug?}', 'MedsController@show');
+Route::get('/meds/{slug?}/edit', 'MedsController@edit');
+//Route::post('/meds/{slug?}/edit', 'MedsController@update');
+Route::post('/meds/{slug?}/delete', 'MedsController@destroy');

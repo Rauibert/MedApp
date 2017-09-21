@@ -31,6 +31,18 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label for="actividad" class="col-lg-2 control-label">Actividad</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="actividad" placeholder="Actividad" name="actividad">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="group" class="col-lg-2 control-label">Grupo</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="grupo" placeholder="Grupo" name="grupo">
+                    </div>
+                </div>
+                <div class="form-group">
                     <label for="urlImage" class="col-lg-2 control-label">urlImage</label>
                     <div class="col-lg-10">
                         <input type="text" class="form-control" id="urlImage" placeholder="urlImage" name="urlImage">

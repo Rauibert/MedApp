@@ -62,6 +62,8 @@ class MedsController extends Controller
         $med = new Med(array(
             'title' => $request->get('title'),
             'description' => $request->get('description'),
+            'actividad' => $request->get('actividad'),
+            'grupo' => $request->get('grupo'),
             'urlImage' => $request->get('urlImage'),
             'slug' => $slug
         ));

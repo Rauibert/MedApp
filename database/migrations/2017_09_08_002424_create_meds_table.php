@@ -17,6 +17,8 @@ class CreateMedsTable extends Migration
             $table->increments('id');
             $table->string('title', 255);
             $table->text('description');
+            $table->string('actividad');
+            $table->string('grupo');
             $table->string('slug')->nullable();
             $table->string('urlImage');
             $table->tinyInteger('status')->default(1);  

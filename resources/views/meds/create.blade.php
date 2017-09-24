@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="container col-md-8 col-md-offset-2">
-        <form class="form-horizontal" method="post">
+        <form class="form-horizontal"  method="POST" enctype="multipart/form-data">
 
         @foreach ($errors->all() as $error)
             <p class="alert alert-danger">{{ $error }}</p>
@@ -43,9 +43,9 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="urlImage" class="col-lg-2 control-label">urlImage</label>
+                    <label for="urlImage" class="col-lg-2 control-label">Imagen</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="urlImage" placeholder="urlImage" name="urlImage">
+                        <input type="file" class="form-control" name="urlImage">
                     </div>
                 </div>
                 <div class="form-group">

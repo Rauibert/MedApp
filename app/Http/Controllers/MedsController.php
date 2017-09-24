@@ -59,12 +59,28 @@ class MedsController extends Controller
      */
     public function store(MedFormRequest $request){
         $slug = uniqid();
+        
+        //Obtenemos la imagen
+        $file = $request->urlImage; 
+        
+        //Cogemos el nombre del archivo
+        $nombre = $file->getClientOriginalName();
+            
+        try{
+            //indicamos que queremos guardar un nuevo archivo en el disco local
+            \Storage::disk('local')->put($nombre,  \File::get($file));
+
+        }catch(Exception $e){
+            return redirect('/create')->with('status', 'No se ha subido el archivo');
+        }
+
+        //Datos de medicamento que entrarán en la base de datos
         $med = new Med(array(
             'title' => $request->get('title'),
             'description' => $request->get('description'),
             'actividad' => $request->get('actividad'),
             'grupo' => $request->get('grupo'),
-            'urlImage' => $request->get('urlImage'),
+            'urlImage' => $nombre,
             'slug' => $slug
         ));
 
@@ -74,10 +90,6 @@ class MedsController extends Controller
             'med' => $slug,
         );
         
-        
         return redirect('/create')->with('status', 'Su medicamento ha sido agregado. Su id única es '.$slug);
     }
-
-
-
 }

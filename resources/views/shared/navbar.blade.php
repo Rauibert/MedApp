@@ -11,10 +11,10 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="http://127.0.0.1:8000/">Inicio</a></li>        
-        <li><a href="route::meds">Meds</a></li>
-        <li><a href="about">Acerca de</a></li>
-        <li><a href="contact">Contacto</a></li>
+        <li class="active"><a href="{{URL::to('/')}}">Inicio</a></li>        
+        <li><a href="{{URL::to('meds')}}">Meds</a></li>
+        <li><a href="{{URL::to('about')}}">Acerca de</a></li>
+        <li><a href="{{URL::to('contact')}}">Contacto</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">

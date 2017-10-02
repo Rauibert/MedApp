@@ -44,6 +44,23 @@ class MedsController extends Controller
         return view('meds.edit', compact('med'));
     }
 
+    public function update($slug, MedFormRequest $request){
+        $med = Med::whereSlug($slug)->firstOrFail();
+        $med->title = $request->get('title');
+        $med->description = $request->get('description');
+        $med->actividad = $request->get('actividad');
+        $med->grupo = $request->get('grupo');
+        $med->urlImage = $request->get('urlImage');
+
+        if($request->get('status') != null){
+            $med->status = 0;
+        }else{
+            $med->status = 1;
+        }
+        $med->save();
+        return redirect(action('MedsController@edit', $med->slug))->with('status', '¡El medicamento '.$slug.' ha sido actualizado!');
+    }
+
     public function destroy($slug){
         $med = Med::whereSlug($slug)->firstOrFail();
         $med->delete();

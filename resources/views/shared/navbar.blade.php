@@ -12,7 +12,7 @@
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="active"><a href="http://127.0.0.1:8000/">Inicio</a></li>        
-        <li><a href="../meds">Meds</a></li>
+        <li><a href="route::meds">Meds</a></li>
         <li><a href="about">Acerca de</a></li>
         <li><a href="contact">Contacto</a></li>
         <li class="dropdown">

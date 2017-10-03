@@ -21,7 +21,7 @@
                         @foreach($meds as $med)
                             
 
-                            <div class="card col-md-4">
+                            <div class="card border-secondary col-md-4">
                                 <img class="card-img-top img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ibuprofen.svg/800px-Ibuprofen.svg.png" alt="{!! $med->title !!}">
                                 <div class="card-block">
                                     <h2 class="card-title">{!! $med->title !!}</h2>

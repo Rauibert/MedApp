@@ -27,7 +27,7 @@
                     <div class="form-group">
                         <label for="content" class="col-lg-2 control-label">Descripción</label>
                         <div class="col-lg-10">
-                            <textarea id="content" class="form-control" name="description">{!! $med->description !!}</textarea>                            
+                            <textarea id="content" class="form-control" name="description" rows="8">{!! $med->description !!}</textarea>                            
                         </div>
                     </div>
 

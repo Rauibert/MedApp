@@ -26,7 +26,7 @@
                 <div class="form-group">
                     <label for="description" class="col-lg-2 control-label">Descripción</label>
                     <div class="col-lg-10">
-                        <textarea id="description" class="form-control" name="description"></textarea>
+                        <textarea id="description" class="form-control" name="description" rows="8"></textarea>
                         <span class="help-block">Descripción del medicamento</span>
                     </div>
                 </div>

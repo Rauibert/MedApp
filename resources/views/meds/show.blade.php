@@ -1,5 +1,7 @@
 @extends('shared.master')
-@section('title','{!! $med->title !!}')
+@section('title')
+    {!! $med->title !!}
+@endsection
 @section('content')
 
     <div class="container col-md-8 col-md-offset-2">

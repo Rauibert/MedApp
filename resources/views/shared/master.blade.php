@@ -60,6 +60,22 @@
     .m-b-md {
       margin-bottom: 30px;
     }
+
+    .card-text {
+      max-height: 12rem;/*line-height por nº de líneas*/
+      overflow: hidden; 
+            
+    }
+    .card-text::after {
+      content:'...';  
+      text-overflow:ellipsis;    
+    }
+    .card-img-top{
+      max-height: 170px;
+      padding: 10px 0px;
+    }
+
+
   </style>
 
 </head>

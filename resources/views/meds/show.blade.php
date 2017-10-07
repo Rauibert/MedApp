@@ -8,7 +8,7 @@
         <div class="well bs-component">
             <div class="content">
                 <h2 class="header">{!! $med->title !!}</h2>
-                <img class="img-responsive center-block" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ibuprofen.svg/800px-Ibuprofen.svg.png" alt="{!! $med->title !!}">
+                <img class="img-responsive center-block" src="{!! Storage::url($med->urlImage) !!}" alt="{!! $med->title !!}">
                 <br>
                 <p>{!! $med->description !!}</p>
             </div>

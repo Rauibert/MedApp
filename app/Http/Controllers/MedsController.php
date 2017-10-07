@@ -39,11 +39,24 @@ class MedsController extends Controller
         return view('meds.show', compact('med'));
     }
 
+    /**
+     * Función para editar un medicamento
+     *
+     * @param [type] $slug
+     * @return void
+     */
     public function edit($slug){
         $med = Med::whereSlug($slug)->firstOrFail();
         return view('meds.edit', compact('med'));
     }
-
+    
+    /**
+     * Función para actualizar un medicamento
+     *
+     * @param [type] $slug
+     * @param MedFormRequest $request
+     * @return void
+     */
     public function update($slug, MedFormRequest $request){
         $med = Med::whereSlug($slug)->firstOrFail();
         $med->title = $request->get('title');
@@ -61,6 +74,12 @@ class MedsController extends Controller
         return redirect(action('MedsController@edit', $med->slug))->with('status', '¡El medicamento '.$slug.' ha sido actualizado!');
     }
 
+    /**
+     * Función para eliminar un medicamento
+     *
+     * @param [type] $slug
+     * @return void
+     */
     public function destroy($slug){
         $med = Med::whereSlug($slug)->firstOrFail();
         $med->delete();

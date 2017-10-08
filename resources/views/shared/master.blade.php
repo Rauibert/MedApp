@@ -62,13 +62,20 @@
     }
 
     .card-text {
-      max-height: 12rem;/*line-height por nº de líneas*/
-      overflow: hidden; 
+      display: block;
+      display: -webkit-box;
+      height: 117.2px;
+      font-size: 14px;
+      line-height: 1.4;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
             
     }
     .card-text::after {
       content:'...';  
-      text-overflow:ellipsis;    
+   
     }
     .card-img-top{
       max-height: 170px;

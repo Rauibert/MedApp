@@ -22,11 +22,11 @@
                             
 
                             <div class="card border-secondary col-md-4">
-                                <img class="card-img-top img-responsive" src="{!! Storage::url($med->urlImage) !!}" alt="{!! $med->title !!}">
+                                <img class="card-img-top img-responsive center-block" src="{!! Storage::url($med->urlImage) !!}" alt="{!! $med->title !!}">
                                 <div class="card-block">
                                     <h2 class="card-title">{!! $med->title !!}</h2>
                                     <p class="card-text">{!! $med->description !!}</p>
-                                    <a href="{!! action('MedsController@show', $med->slug) !!}" class="btn btn-primary">{!!$med->title!!}</a>
+                                    <a href="{!! action('MedsController@show', $med->slug) !!}" class="btn btn-primary col-xs-offset-10 col-md-offset-9">Ver más</a>
                                 </div>
                             </div>
 

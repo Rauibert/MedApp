@@ -5,13 +5,17 @@
 @section('content')
 
     <div class="container col-md-8 col-md-offset-2">
-        <div class="well bs-component">
-            <div class="content">
-                <h2 class="header">{!! $med->title !!}</h2>
+        <div class="bs-component">
+            <div class="contenido">
+                <h2 class="header well">{!! $med->title !!}</h2>
                 <img class="img-responsive center-block" src="{!! Storage::url($med->urlImage) !!}" alt="{!! $med->title !!}">
                 <br>
+
+                <h4><b>Grupo:</b> {!! $med->grupo !!}</h4>
+                <h4><b>Actividad:</b> {!! $med->actividad !!}</h4>
                 <p>{!! $med->description !!}</p>
             </div>
+            <br>
             <a href="{!! action('MedsController@edit', $med->slug) !!}" class="btn btn-info">Editar</a>
             <form method="post" action="{!! action('MedsController@destroy', $med->slug) !!}" class="pull-left">
                 <input type="hidden" name="_token" value="{!! csrf_token() !!}">

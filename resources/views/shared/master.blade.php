@@ -73,6 +73,19 @@
       text-overflow: ellipsis;
             
     }
+
+    .descCorta{
+      display: block;
+      display: -webkit-box;
+      height: 60px;
+      font-size: 12px;
+      line-height: 1.2;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     .card-text::after {
       content:'...';  
    
@@ -95,6 +108,7 @@
       max-height: 450px;
     }
 
+    
 
   </style>
 

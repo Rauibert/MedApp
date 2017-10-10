@@ -16,7 +16,7 @@
             
             <input type="hidden" name="_token" value="{!! csrf_token() !!}">
             <fieldset>
-                <legend>Agregar nuevo medicamento</legend>
+                <legend><h2>Agregar nuevo medicamento</h2></legend>
                 <div class="form-group">
                     <label for="title" class="col-lg-2 control-label">Título</label>
                     <div class="col-lg-10">
@@ -56,5 +56,39 @@
                 </div>
             </fieldset>
         </form>  
+        <br><hr>
+
+        <h2>Tabla de medicamentos</h2><br>
+
+        <table class="table">
+            <thead class="thead-inverse">
+                <tr>
+                <th>#</th>
+                <th>Imágen</th>
+                <th>Título</th>
+                <th>Descripción</th>
+                <th>Actividad</th>
+                <th>Grupo</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+            @foreach($meds as $med)            
+                <tr>
+                    <th scope="row">{!! $med->id !!}</th>
+                    <td><img class="img-responsive" src="{!! Storage::url($med->urlImage) !!}" alt="{!! $med->title !!}">  </td>
+                    <td>{!! $med->title !!}</td>
+                    <td class="descCorta">{!! $med->description !!}</td>
+                    <td>{!! $med->actividad !!}</td>
+                    <td>{!! $med->grupo !!}</td>
+                </tr>
+            @endforeach
+                
+            </tbody>
+        </table>
+
     </div>
+
+    
+
     @endsection

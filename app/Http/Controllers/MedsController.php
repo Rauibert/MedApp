@@ -15,7 +15,8 @@ class MedsController extends Controller
      * @return void
      */
     public function create(){
-        return view('meds.create');
+        $meds = Med::all();
+        return view('meds.create', compact('meds'));
     }
 
     /**

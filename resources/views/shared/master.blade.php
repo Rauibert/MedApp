@@ -82,6 +82,19 @@
       padding: 10px 0px;
     }
 
+    .titulo{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .imgTitulo{
+      max-height: 180px;
+    }
+
+    .imgPrincipal{
+      max-height: 450px;
+    }
+
 
   </style>
 

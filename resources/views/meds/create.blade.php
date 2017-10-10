@@ -69,6 +69,8 @@
                 <th>Descripción</th>
                 <th>Actividad</th>
                 <th>Grupo</th>
+                <th>Editar</th>
+                <th>Borrar</th>
                 </tr>
             </thead>
             <tbody>
@@ -81,6 +83,13 @@
                     <td class="descCorta">{!! $med->description !!}</td>
                     <td>{!! $med->actividad !!}</td>
                     <td>{!! $med->grupo !!}</td>
+                    <td><a href="{!! action('MedsController@edit', $med->slug) !!}" class="btn btn-info">Editar</a></td>
+                    <td>
+                        <form method="post" action="{!! action('MedsController@destroy', $med->slug) !!}" class="pull-left">
+                            <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+                            <button type="submit" class="btn btn-warning">Borrar</button>                            
+                        </form>
+                    </td>
                 </tr>
             @endforeach
                 

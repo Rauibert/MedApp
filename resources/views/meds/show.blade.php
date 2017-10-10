@@ -17,13 +17,6 @@
                 <p>{!! $med->description !!}</p>
             </div>
             <br>
-            <a href="{!! action('MedsController@edit', $med->slug) !!}" class="btn btn-info">Editar</a>
-            <form method="post" action="{!! action('MedsController@destroy', $med->slug) !!}" class="pull-left">
-                <input type="hidden" name="_token" value="{!! csrf_token() !!}">
-                <div>
-                    <button type="submit" class="btn btn-warning">Borrar</button>
-                </div>
-            </form>
             <div class="clearfix"></div>            
         </div>
     </div>

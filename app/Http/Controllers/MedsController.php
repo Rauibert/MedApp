@@ -84,7 +84,7 @@ class MedsController extends Controller
     public function destroy($slug){
         $med = Med::whereSlug($slug)->firstOrFail();
         $med->delete();
-        return redirect('/meds')->with('status', 'El medicamento '.$slug.' ha sido borrado');
+        return redirect('/create')->with('status', 'El medicamento '.$slug.' ha sido borrado');
     }
     
 

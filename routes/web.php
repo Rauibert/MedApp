@@ -22,3 +22,6 @@ Route::get('/meds/{slug?}', 'MedsController@show');
 Route::get('/meds/{slug?}/edit', 'MedsController@edit');
 Route::post('/meds/{slug?}/edit', 'MedsController@update');
 Route::post('/meds/{slug?}/delete', 'MedsController@destroy');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
